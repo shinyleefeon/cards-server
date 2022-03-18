@@ -2,6 +2,9 @@ package card
 
 import "fmt"
 
+// card Package
+// Two values Suit and FaceValue
+
 type Suit string
 
 const (
@@ -30,14 +33,20 @@ const (
 	King
 )
 
+//Structure named Card defines each card to have a suit and face value
+
 type Card struct {
 	Suit Suit
 	Val  FaceValue
 }
 
+//Returns (or prints?) a string with 'value of suit'
+
 func (c Card) String() string {
 	return fmt.Sprintf("%v of %v", c.Val, c.Suit)
 }
+
+// Takes a string value input and returns the string for the value
 
 func (v FaceValue) String() string {
 	switch v {
